@@ -58,9 +58,7 @@ This class handles the calculation of heat transfer properties:
 - **Heat Transfer Coefficient** — The heat transfer coefficient is determined using the Dittus-Boelter equation for turbulent flow inside pipes. This coefficient is essential for determining how efficiently heat is transferred between the refrigerant and the surrounding environment.
 
 - **Heat Transfer Rate** — The rate at which heat is transferred is calculated using the standard formula:
-  \[
-  Q = h \cdot A \cdot \Delta T
-  \]
+  $Q = h \cdot A \cdot \Delta T$
   Where:
   - `h` is the heat transfer coefficient.
   - `A` is the surface area for heat exchange.
