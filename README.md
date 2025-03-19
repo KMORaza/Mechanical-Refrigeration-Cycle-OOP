@@ -14,7 +14,6 @@ The design models the mechanical refrigeration cycle with inputs that are typica
 * **HumidityCalculator.java**: Calculates humidity-related properties like the humidity ratio, dew point, and wet bulb temperature. These are important for understanding the moisture content and heat transfer performance.
 * **RefrigerationCycle.java**: The core class for performing calculations such as work done, heat absorbed/rejected, and adjusting for pressure drops. It calculates the efficiency of the system and handles pressure drop calculations in the cycle.
 
----
 
 ### Main.java
 The `Main.java` file is where the refrigeration cycle is initialized, and its thermodynamic properties are calculated. Here’s how it works:
@@ -43,19 +42,17 @@ The `Main.java` file is where the refrigeration cycle is initialized, and its th
 
 - **Humidity Calculations**:
     - The system also considers the moisture content in the air using `HumidityCalculator`. This includes calculating the humidity ratio, dew point, and wet bulb temperature. These values are important for understanding the air handling properties and heat exchange in HVAC applications.
+    
 
----
-
-### **HeatPump.java**
+### HeatPump.java
 The `HeatPump.java` class provides methods to retrieve key thermodynamic properties of the refrigerant, primarily focused on enthalpy and specific heat:
 
 - **Enthalpy**: The enthalpy values for the saturated liquid and vapor states are given at specific conditions (temperature and pressure). These values are crucial for the calculations of work and heat transfer.
 
 - **Specific Heat**: Specific heat capacities at constant pressure (Cp) and constant volume (Cv) are used to determine the amount of energy required to change the temperature of the refrigerant. This is important for calculating energy balances and heat transfer rates.
 
----
 
-### **HeatTransfer.java**
+### HeatTransfer.java
 This class handles the calculation of heat transfer properties:
 
 - **Heat Transfer Coefficient**: The heat transfer coefficient is determined using the Dittus-Boelter equation for turbulent flow inside pipes. This coefficient is essential for determining how efficiently heat is transferred between the refrigerant and the surrounding environment.
@@ -69,18 +66,16 @@ This class handles the calculation of heat transfer properties:
   - `A` is the surface area for heat exchange.
   - `ΔT` is the temperature difference between the fluid and the surrounding medium.
 
----
 
-### **HumidityCalculator.java**
+### HumidityCalculator.java
 Humidity plays a significant role in HVAC and refrigeration cycles, especially in systems where air handling is involved:
 
 - **Humidity Ratio**: The mass of water vapor per unit mass of dry air is important for understanding moisture content in the system.
   
 - **Dew Point and Wet Bulb Temperature**: The dew point is the temperature at which air becomes saturated with water vapor, and condensation begins. The wet bulb temperature is crucial for assessing the system’s performance in humid conditions.
 
----
 
-### **RefrigerationCycle.java**
+### RefrigerationCycle.java
 This class implements several important thermodynamic calculations and adjusts the cycle for real-world factors:
 
 - **Work Done**: Calculates the work done by the compressor and turbine, including actual work that accounts for system inefficiencies.
@@ -91,30 +86,3 @@ This class implements several important thermodynamic calculations and adjusts t
   
 - **COP**: The coefficient of performance is calculated by dividing the actual heat absorbed by the actual work input to the compressor. This is a key indicator of the system’s efficiency.
 
----
-
-## Example Calculation
-
-Given the following inputs:
-
-- **Evaporator**:
-  - Temperature = 5°C
-  - Pressure = 1.2 bar
-  - Saturated liquid enthalpy = 250 kJ/kg
-  - Saturated vapor enthalpy = 450 kJ/kg
-  
-- **Compressor Efficiency**: 85%
-- **Turbine Efficiency**: 90%
-
-The program calculates the work done by the compressor, the work done by the turbine, the heat transfer rates in the evaporator and condenser, and the COP. For example:
-
-- The **work done by the compressor** will depend on the difference in enthalpy between the vapor state at the compressor inlet and the saturated vapor at the outlet, considering the efficiency.
-- The **heat rejected by the condenser** is calculated based on the enthalpy differences and the refrigerant flow rate.
-
----
-
-## Usage
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/mechanical-refrigeration-cycle.git
