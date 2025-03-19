@@ -59,10 +59,10 @@ This class handles the calculation of heat transfer properties:
 
 - **Heat Transfer Rate** — The rate at which heat is transferred is calculated using the standard formula:
   $Q = h \cdot A \cdot \Delta T$
-  Where:
-  - `h` is the heat transfer coefficient.
-  - `A` is the surface area for heat exchange.
-  - `ΔT` is the temperature difference between the fluid and the surrounding medium.
+  where:
+  - $h$ = heat transfer coefficient.
+  - $A$ = surface area for heat exchange.
+  - $ΔT$ = temperature difference between the fluid and the surrounding medium.
 
 
 ### HumidityCalculator.java
